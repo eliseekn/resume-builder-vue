@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply py-1 px-3 border-2 border-gray-200 rounded-lg hover:bg-gray-200 transition-colors duration-500
+    }
+
+    .badge {
+        @apply border rounded bg-gray-200 px-2
+    }
+
+    .section-header {
+        @apply cursor-pointer flex items-center justify-between border-2 px-5 py-2 rounded-lg w-full hover:bg-gray-200 transition-colors duration-500
+    }
+
+    .btn-circle {
+        @apply ml-3 transition-colors duration-500 p-3 h-4 w-4 flex items-center justify-center rounded-full border-2 border-gray-200 hover:bg-gray-200
+    }
+}
