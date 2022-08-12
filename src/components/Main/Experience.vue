@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
     import {Title} from '../Style'
-    import __ from "../../../lang"
+    import __ from "../../lang"
     import {experienceStore, languageStore} from "../../services/store"
     import moment from "moment/moment"
     import 'moment/locale/fr'

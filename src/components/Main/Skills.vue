@@ -8,6 +8,6 @@
 
 <script setup lang="ts">
     import {Title} from '../Style'
-    import __ from "../../../lang"
+    import __ from "../../lang"
     import {skillsStore} from "../../services/store"
 </script>

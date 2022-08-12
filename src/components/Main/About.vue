@@ -6,5 +6,5 @@
 <script setup lang="ts">
     import {aboutStore} from "../../services/store"
     import {Title} from '../Style'
-    import __ from "../../../lang"
+    import __ from "../../lang"
 </script>
