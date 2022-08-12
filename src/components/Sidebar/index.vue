@@ -16,7 +16,7 @@
             </button>
         </div>
 
-        <Separator />
+        <hr class="my-5" />
 
         <Header v-if="sectionStore.has('header')" />
         <About v-if="sectionStore.has('about')" />
@@ -30,7 +30,6 @@
 <script setup lang="ts">
     import {ref} from 'vue'
     import {sectionStore} from "../../services/store"
-    import {Separator} from "../Style"
     import Header from './Header.vue'
     import About from './About.vue'
     import Skills from "./Skills.vue";

@@ -1,5 +1,7 @@
 <template>
-    <Title :content="__('experience')" />
+    <p class="font-medium text-xl mb-3">
+        {{__('experience')}}
+    </p>
 
     <ul class="list-disc ml-10 mt-3" v-for="experience in experienceStore.state">
         <li>
@@ -22,7 +24,6 @@
 </template>
 
 <script setup lang="ts">
-    import {Title} from '../Style'
     import __ from "../../lang"
     import {experienceStore, languageStore} from "../../services/store"
     import moment from "moment/moment"

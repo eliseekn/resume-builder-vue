@@ -1,5 +1,7 @@
 <template>
-    <Title :content="__('certifications')" />
+    <p class="font-medium text-xl mb-3">
+        {{__('certifications')}}
+    </p>
 
     <ul class="list-disc ml-10 mt-3" v-for="certification in certificationStore.state">
         <li>
@@ -17,7 +19,6 @@
 </template>
 
 <script setup lang="ts">
-    import {Title} from '../Style'
     import __ from "../../lang"
     import {certificationStore, languageStore} from "../../services/store"
     import moment from "moment/moment"

@@ -1,5 +1,7 @@
 <template>
-    <Title :content="__('education')" />
+    <p class="font-medium text-xl mb-3">
+        {{__('education')}}
+    </p>
 
     <ul class="list-disc ml-10 mt-3" v-for="education in educationStore.state">
         <li>
@@ -18,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-    import {Title} from '../Style'
     import __ from "../../lang"
     import {educationStore, languageStore} from "../../services/store"
     import moment from "moment/moment"
