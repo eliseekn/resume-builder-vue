@@ -41,7 +41,7 @@
     const stateId = ref<number>(1)
     const state = ref<Props>({
         id: stateId.value,
-        name: '',
+        school: '',
         degree: '',
         startDate: '',
         endDate: ''
@@ -53,7 +53,7 @@
 
     const handleAddEducation = () => {
         if (
-            state.value.name === "" ||
+            state.value.school === "" ||
             state.value.degree === "" ||
             state.value.startDate === "" ||
             state.value.endDate === ""
@@ -68,7 +68,7 @@
 
         state.value = {
             id: stateId.value,
-            name: '',
+            school: '',
             degree: '',
             startDate: '',
             endDate: ''

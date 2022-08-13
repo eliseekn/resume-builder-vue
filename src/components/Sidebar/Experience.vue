@@ -12,7 +12,7 @@
 
     <div class="ml-2 px-5" v-if="displayOptions">
         <div class="mt-3">
-            <input type="search" class="rounded-lg w-full mb-3" placeholder="Company name" v-model="state.name" />
+            <input type="search" class="rounded-lg w-full mb-3" placeholder="Company name" v-model="state.company" />
             <input type="search" class="rounded-lg w-full mb-3" placeholder="Job title" v-model="state.jobTitle" />
 
             <textarea
@@ -31,7 +31,7 @@
 
             <div class="mt-3 grid grid-cols-1 gap-1">
                 <div class="flex items-center justify-between badge" v-for="experience in experienceStore.state">
-                    <span>{{ experience.jobTitle }} at {{ experience.name }}</span>
+                    <span>{{ experience.jobTitle }} at {{ experience.company }}</span>
                     <span class="cursor-pointer px-1 font-bold" @click="handleRemoveExperience(experience.id)">x</span>
                 </div>
             </div>
@@ -48,7 +48,7 @@
     const stateId = ref<number>(1)
     const state = ref<Props>({
         id: stateId.value,
-        name: '',
+        company: '',
         jobTitle: '',
         jobDescription: '',
         startDate: '',
@@ -61,7 +61,7 @@
 
     const handleAddExperience = () => {
         if (
-            state.value.name === "" ||
+            state.value.company === "" ||
             state.value.jobTitle === "" ||
             state.value.jobDescription === "" ||
             state.value.startDate === "" ||
@@ -77,7 +77,7 @@
 
         state.value = {
             id: stateId.value,
-            name: '',
+            company: '',
             jobTitle: '',
             jobDescription: '',
             startDate: '',

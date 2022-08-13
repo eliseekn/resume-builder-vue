@@ -7,7 +7,7 @@
         <li>
             <span class="font-medium italic">{{ education.degree }}</span>
             {{ __('at') }}
-            <span class="font-medium italic">{{ education.name }}</span>
+            <span class="font-medium italic">{{ education.school }}</span>
 
             (
                 <span class="italic">

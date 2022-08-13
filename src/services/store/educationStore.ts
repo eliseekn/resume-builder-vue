@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 export interface Props {
     id: number,
-    name: string,
+    school: string,
     degree: string,
     startDate: string,
     endDate: string,

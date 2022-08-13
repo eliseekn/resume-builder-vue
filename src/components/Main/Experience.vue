@@ -7,7 +7,7 @@
         <li>
             <span class="font-medium italic">{{ experience.jobTitle }}</span>
             {{ __('at') }}
-            <span class="font-medium italic">{{ experience.name }}</span>
+            <span class="font-medium italic">{{ experience.company }}</span>
 
             (
                 <span class="italic">

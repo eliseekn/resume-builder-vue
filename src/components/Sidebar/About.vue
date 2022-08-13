@@ -14,7 +14,7 @@
         <div class="mt-3">
             <textarea
                 class="rounded-lg w-full resize-none"
-                placeholder="I have 3+ years of experience in user interfaces and web app development."
+                placeholder="I have 3+ years experience in user interfaces and web app development."
                 rows="5"
                 v-model="state"
                 v-on:input="aboutStore.set(state)"

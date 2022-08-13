@@ -1,7 +1,7 @@
 <template>
     <div class="text-center">
         <p class="font-medium">{{ headerStore.state.fullName }}</p>
-        <p class="font-medium">{{ headerStore.state.jobTitle }}</p>
+        <p class="font-medium text-2xl mt-3">{{ headerStore.state.jobTitle }}</p>
 
         <div class="flex justify-center items-center gap-x-5 mt-3">
             <div v-if="headerStore.state.location !== ''" class="flex flex-row items-center">
