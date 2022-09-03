@@ -54,7 +54,9 @@
             return alert('Please provide a valid certification')
         }
 
-        if (certificationStore.has(state.value)) return alert('This certification has already been added')
+        if (certificationStore.has(state.value)) {
+            return alert('This certification has already been added')
+        }
 
         stateId.value = stateId.value + 1
         certificationStore.add(state.value)

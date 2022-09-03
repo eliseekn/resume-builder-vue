@@ -37,8 +37,13 @@
     const handleRemoveSkill = (skill: string) => {skillsStore.remove(skill)}
 
     const handleAddSkill = () => {
-        if (state.value === '') return alert('Please provide a valid skill')
-        if (skillsStore.has(state.value)) return alert('This skill has already been added')
+        if (state.value === '') {
+            return alert('Please provide a valid skill')
+        }
+
+        if (skillsStore.has(state.value)) {
+            return alert('This skill has already been added')
+        }
 
         skillsStore.add(state.value)
         state.value = ''

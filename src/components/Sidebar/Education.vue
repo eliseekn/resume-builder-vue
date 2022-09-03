@@ -12,7 +12,7 @@
 
     <div class="ml-2 px-5" v-if="displayOptions">
         <div class="mt-3">
-            <input type="search" class="rounded-lg w-full mb-3" placeholder="School name" v-model="state.name" />
+            <input type="search" class="rounded-lg w-full mb-3" placeholder="School name" v-model="state.school" />
             <input type="search" class="rounded-lg w-full mb-3" placeholder="Degree" v-model="state.degree" />
 
             <div class="flex items-center mb-3">
@@ -24,7 +24,7 @@
 
             <div class="mt-3 grid grid-cols-1 gap-1">
                 <div class="flex items-center justify-between badge" v-for="education in educationStore.state">
-                    <span>{{ education.degree }} at {{ education.name }}</span>
+                    <span>{{ education.degree }} at {{ education.school }}</span>
                     <span class="cursor-pointer px-1 font-bold" @click="handleRemoveEducation(education.id)">x</span>
                 </div>
             </div>
@@ -61,7 +61,9 @@
             return alert('Please provide a valid education')
         }
 
-        if (educationStore.has(state.value)) return alert('This education has already been added')
+        if (educationStore.has(state.value)) {
+            return alert('This education has already been added')
+        }
 
         stateId.value = stateId.value + 1
         educationStore.add(state.value)

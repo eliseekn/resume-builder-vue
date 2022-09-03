@@ -1,7 +1,11 @@
 <template>
     <div class="py-3 px-5 border-b-2">
         <div class="flex justify-between items-center">
-            <h1 class="font-medium text-2xl">Resume Builder <small>(v0.1)</small></h1>
+            <h1 class="font-medium text-xl">Resume Builder <small>(v0.1)</small></h1>
+
+            <a href="https://github.com/eliseekn/resume-builder-vue" class="btn">
+                By @eliseekn
+            </a>
 
             <span>
                 <select name="language" id="language" class="py-1 rounded-lg cursor-pointer mr-3" v-model="state" @change="handleSetLanguage">

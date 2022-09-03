@@ -19,6 +19,7 @@
                 id="full-name"
                 placeholder="Elisée Kouadio N'Guessan"
                 v-model="state.fullName"
+                v-on:input="headerStore.setFullName(state.fullName)"
             />
         </div>
 
@@ -30,6 +31,7 @@
                 id="job-title"
                 placeholder="Full-stack Web Developer"
                 v-model="state.jobTitle"
+                v-on:input="headerStore.setJobTitle(state.jobTitle)"
             />
         </div>
 
@@ -41,6 +43,7 @@
                 id="location"
                 placeholder="Abidjan, Côte d'Ivoire"
                 v-model="state.location"
+                v-on:input="headerStore.setLocation(state.location)"
             />
         </div>
 
@@ -52,6 +55,7 @@
                 id="email"
                 placeholder="eliseekn@gmail.com"
                 v-model="state.emailAddress"
+                v-on:input="headerStore.setEmailAddress(state.emailAddress)"
             />
         </div>
 
@@ -63,6 +67,7 @@
                 id="phone-number"
                 placeholder="(+225) 0759434291/0500471669"
                 v-model="state.phoneNumber"
+                v-on:input="headerStore.setPhoneNumber(state.phoneNumber)"
             />
         </div>
 
@@ -74,6 +79,7 @@
                 id="portfolio"
                 placeholder="https://eliseekn.netlify.app"
                 v-model="state.portfolioUrl"
+                v-on:input="headerStore.setPortfolioUrl(state.portfolioUrl)"
             />
         </div>
     </div>
@@ -84,7 +90,14 @@
     import {sectionStore, headerStore} from "../../services/store"
 
     const displayOptions = ref<boolean>(false)
-    const state = ref<{}>(headerStore.state)
+    const state = ref<{}>({
+        fullName: '',
+        emailAddress: '',
+        jobTitle: '',
+        location: '',
+        phoneNumber: '',
+        portfolioUrl: ''
+    })
 
     const handleDisplayOptions = () => {displayOptions.value = !displayOptions.value}
     const handleRemoveSection = () => {sectionStore.remove('header')}

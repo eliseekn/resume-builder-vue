@@ -14,7 +14,7 @@
         <div class="mt-3">
             <textarea
                 class="rounded-lg w-full resize-none"
-                placeholder="I have 3+ years experience in user interfaces and web app development."
+                placeholder="I have 3+ years experience in user interfaces and web application development."
                 rows="5"
                 v-model="state"
                 v-on:input="aboutStore.set(state)"
@@ -28,7 +28,7 @@
     import {sectionStore, aboutStore} from "../../services/store"
 
     const displayOptions = ref<boolean>(false)
-    const state = ref<string>(aboutStore.state)
+    const state = ref<string>('')
 
     const handleDisplayOptions = () => {displayOptions.value = !displayOptions.value}
     const handleRemoveSection = () => {sectionStore.remove('about')}

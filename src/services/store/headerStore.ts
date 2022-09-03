@@ -9,7 +9,22 @@ export const headerStore = reactive({
         phoneNumber: '',
         portfolioUrl: '',
     },
-    set(state: {}) {
-        this.state = Object.assign(this.state, state)
+    setFullName(state: string) {
+        this.state.fullName = state
+    },
+    setJobTitle(state: string) {
+        this.state.jobTitle = state
+    },
+    setLocation(state: string) {
+        this.state.location = state
+    },
+    setEmailAddress(state: string) {
+        this.state.emailAddress = state
+    },
+    setPhoneNumber(state: string) {
+        this.state.phoneNumber = state
+    },
+    setPortfolioUrl(state: string) {
+        this.state.portfolioUrl = state
     }
 })

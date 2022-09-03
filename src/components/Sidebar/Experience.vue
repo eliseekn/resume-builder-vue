@@ -70,7 +70,9 @@
             return alert('Please provide a valid experience')
         }
 
-        if (experienceStore.has(state.value)) return alert('This experience has already been added')
+        if (experienceStore.has(state.value)) {
+            return alert('This experience has already been added')
+        }
 
         stateId.value = stateId.value + 1
         experienceStore.add(state.value)
