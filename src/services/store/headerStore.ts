@@ -1,14 +1,25 @@
 import { reactive } from 'vue'
 
+export interface Props {
+    fullName: string,
+    emailAddress: string,
+    jobTitle: string,
+    location: string,
+    phoneNumber: string,
+    portfolioUrl: string,
+}
+
+const initialState: Props = {
+    fullName: '',
+    emailAddress: '',
+    jobTitle: '',
+    location: '',
+    phoneNumber: '',
+    portfolioUrl: '',
+}
+
 export const headerStore = reactive({
-    state: {
-        fullName: '',
-        emailAddress: '',
-        jobTitle: '',
-        location: '',
-        phoneNumber: '',
-        portfolioUrl: '',
-    },
+    state: initialState,
     setFullName(state: string) {
         this.state.fullName = state
     },

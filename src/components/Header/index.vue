@@ -3,7 +3,7 @@
         <div class="flex justify-between items-center">
             <h1 class="font-medium text-xl">Resume Builder <small>(v0.1)</small></h1>
 
-            <a href="https://github.com/eliseekn/resume-builder-vue" class="btn">
+            <a href="https://github.com/eliseekn/resume-builder-vue" class="btn" target="_blank">
                 By @eliseekn
             </a>
 

@@ -88,16 +88,10 @@
 <script setup lang="ts">
     import {ref} from 'vue'
     import {sectionStore, headerStore} from "../../services/store"
+    import {Props} from "../../services/store/headerStore";
 
     const displayOptions = ref<boolean>(false)
-    const state = ref<{}>({
-        fullName: '',
-        emailAddress: '',
-        jobTitle: '',
-        location: '',
-        phoneNumber: '',
-        portfolioUrl: ''
-    })
+    const state = ref<Props>(headerStore.state)
 
     const handleDisplayOptions = () => {displayOptions.value = !displayOptions.value}
     const handleRemoveSection = () => {sectionStore.remove('header')}
